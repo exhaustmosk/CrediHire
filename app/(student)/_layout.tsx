@@ -16,6 +16,7 @@ export default function StudentLayout() {
           shadowOpacity: 0.15,
           shadowRadius: 8,
           elevation: 4, // Android shadow
+          borderRadius:15,
         },
         tabBarBackground: () =>
           Platform.OS === "ios" ? (
