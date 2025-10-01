@@ -18,7 +18,6 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
     <View style={styles.sectionContainer}>
       <BlurView intensity={8} tint="light" style={styles.glassCard}>
         <View style={styles.cardHeader}>
-          <Text style={styles.cardIcon}>⚙️</Text>
           <Text style={styles.cardTitle}>Skills</Text>
         </View>
         <View style={styles.skillsContainer}>
