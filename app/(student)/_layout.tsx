@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { Platform, StyleSheet, View } from "react-native";
 
 export default function StudentLayout() {
   return (
@@ -7,7 +8,21 @@ export default function StudentLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#1e90ff",
-        tabBarStyle: { backgroundColor: "#fff" },
+        // tabBarInactiveTintColor: "#",
+        tabBarStyle: {
+          position: "absolute",
+          backgroundColor:"#FFF",
+          shadowColor: "#000",
+          shadowOpacity: 0.15,
+          shadowRadius: 8,
+          elevation: 4, // Android shadow
+        },
+        tabBarBackground: () =>
+          Platform.OS === "ios" ? (
+            <View style={StyleSheet.absoluteFill}>
+              {/* Real blur on iOS only */}
+            </View>
+          ) : null,
       }}
     >
       <Tabs.Screen
